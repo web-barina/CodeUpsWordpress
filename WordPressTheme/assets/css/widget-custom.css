@@ -1,27 +1,25 @@
-//管理画面ダッシュボード
 ul.custom_widget a {
   display: flex;
-  gap: rem(16);
+  gap: 16px;
   align-items: center;
-  padding: rem(10) 0;
+  padding: 10px 0;
 }
 
 ul.custom_widget li :hover {
-  background-color: $light-green;
+  background-color: #ddf0f1;
 }
 
 ul.custom_widget {
   display: flex;
   flex-direction: column;
-  gap: rem(24);
+  gap: 24px;
 }
 
 .dashicons {
-  color: $green;
-  font-size: rem(24);
+  color: #408f95;
+  font-size: 24px;
 }
 
-//各投稿画面
 p#block-1c3e6409-d29e-4efc-bbe8-f43b450af9f5,
 p.block-editor-default-block-appender__content {
   background-color: #fff;
@@ -30,33 +28,31 @@ p.block-editor-default-block-appender__content {
 
 textarea#acf-field_669713a287c24,
 textarea#acf-field_669718180f1f4 {
-  border: solid rem(1) #2c3338;
+  border: solid 1px #2c3338;
   width: 100%;
-  padding: rem(8);
+  padding: 8px;
   margin: 0;
   box-sizing: border-box;
-  font-size: rem(14);
+  font-size: 14px;
   line-height: 1.4;
-  border-radius: rem(4);
+  border-radius: 4px;
 }
 
-//ラジオボタン
 ul.acf-radio-list li label,
 ul.acf-checkbox-list li label {
-  display: flex !important;
+  display: flex;
   align-items: center;
 }
 
 ul.acf-radio-list li input[type="radio"] {
-  border: solid rem(1) #8c8f94;
+  border: solid 1px #8c8f94;
   display: block;
 }
 
 ul.acf-radio-list li input[type="radio"]::before {
-  border: solid rem(1) #8c8f94;
+  border: solid 1px #8c8f94;
 }
 
-//SCFのラジオボタン
 .smart-cf-group .smart-cf-group-repeat label .ios-ui-select,
 #smart-cf-meta-box-condition-post .ios-ui-select,
 #smart-cf-meta-box-condition-profile .ios-ui-select,
@@ -83,8 +79,8 @@ ul.acf-radio-list li input[type="radio"]::before {
 #smart-cf-meta-box-condition-profile .ios-ui-select .inner,
 #smart-cf-meta-box-condition-taxonomy .ios-ui-select .inner,
 #smart-cf-meta-box-condition-options-page .ios-ui-select .inner {
-  width: 12px !important;
-  height: 12px !important;
+  width: 12px;
+  height: 12px;
 }
 
 .ios-ui-select .inner {
@@ -101,11 +97,6 @@ ul.acf-radio-list li input[type="radio"]::before {
 a,
 div {
   outline: 0;
-}
-
-user agent stylesheet div {
-  display: block;
-  unicode-bidi: isolate;
 }
 
 .ios-ui-select {
