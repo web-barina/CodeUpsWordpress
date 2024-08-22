@@ -1,0 +1,32 @@
+@use "global" as *;
+
+//トップ料金セクション余白
+.top-price-wrapper {
+  padding: rem(82) 0 rem(77);
+  background-color: $light-green;
+  margin-top: rem(80);
+
+  @include mq("md") {
+    margin-top: rem(144);
+    padding: rem(100) 0 rem(98) 0;
+    position: relative;
+  }
+}
+
+.top-price-wrapper::after {
+  display: none;
+
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    background-image: url("../images/common/decoration-fish.png");
+    display: block;
+    bottom: rem(59);
+    left: calc(50% - min(43vw, 38.6rem));
+    max-width: rem(437);
+    width: 30%;
+    height: rem(201);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

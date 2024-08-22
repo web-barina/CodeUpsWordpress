@@ -1,0 +1,83 @@
+@use "global" as *;
+
+.top-info-wrapper {
+  margin-top: rem(70);
+  padding: rem(80) 0 rem(77);
+  background-color: $light-green;
+  @include mq("md") {
+    margin-top: rem(160);
+    padding: rem(100) 0 rem(77);
+  }
+}
+.top-info__inner {
+  max-width: rem(540);
+  @include mq("md") {
+    max-width: none;
+  }
+}
+//ダイビング情報ボタン
+.top-info__btn-wrapper {
+  text-align: center;
+  padding-bottom: rem(5);
+  margin-top: rem(40);
+}
+//ダイビング情報コンテンツ
+.top-info__content {
+  margin: rem(28) auto 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: rem(24);
+  @include mq("md") {
+    margin: rem(40) auto 0;
+    flex-direction: row;
+    max-width: rem(1080);
+    gap: rem(48);
+  }
+}
+//ダイビング情報タイトル・テキスト周り
+@include mq("md") {
+  .top-info__texts {
+    align-content: center;
+  }
+}
+//ダイビング情報テキスト
+.top-info__text {
+  margin-top: rem(8);
+}
+//ダイビング情報タイトル
+.top-info__title {
+  font-size: rem(20);
+  line-height: 1.2;
+  padding-bottom: rem(4);
+  border-bottom: solid rem(1) $green;
+  @include mq("md") {
+    font-size: rem(24);
+  }
+}
+//ダイビング情報写真
+.top-info__img {
+  position: relative;
+  aspect-ratio: 345/227;
+  max-width: rem(540);
+  width: 100%;
+  @include mq("md") {
+    aspect-ratio: 540/356;
+    max-width: rem(537);
+  }
+}
+.top-info__img > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+//ボタン
+.top-info__btn-wrapper {
+  margin-top: rem(40);
+  text-align: center;
+}

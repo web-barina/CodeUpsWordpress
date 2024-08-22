@@ -1,0 +1,9 @@
+@use "global" as *;
+//about us全体余白
+.top-about-us-wrapper {
+  position: relative;
+  margin-top: rem(78);
+  @include mq("md") {
+    margin-top: rem(140);
+  }
+}

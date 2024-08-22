@@ -1,0 +1,102 @@
+@use "global" as *;
+//トップ料金インナー
+.top-price__inner {
+  max-width: rem(540);
+  padding: 0 rem(15);
+  margin: 0 auto;
+  @include mq("md") {
+    max-width: none;
+    padding: 0 rem(25);
+  }
+}
+//トップ料金、メニュー＆写真全体
+.top-price__contents-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: rem(28);
+  @include mq("md") {
+    flex-direction: row-reverse;
+    column-gap: rem(93);
+    margin: rem(40) auto 0 auto;
+    max-width: rem(1077);
+    width: 100%;
+  }
+}
+
+//トップ料金、メニュー全体
+.top-price__contents {
+  width: 100%;
+  margin-top: rem(40);
+  @include mq("md") {
+    width: 50%;
+    margin-top: rem(0);
+  }
+}
+//トップ料金、カテゴリーごと
+.top-price__content {
+  margin-top: rem(40);
+}
+.top-price__content:first-child {
+  margin-top: 0;
+}
+
+//トップ料金、メニュー名＆料金
+.top-price__menu {
+  font-size: rem(14);
+  line-height: 1.71428;
+  display: flex;
+  margin-top: rem(8);
+  column-gap: rem(15);
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: 1.5;
+  }
+}
+//トップ料金&メニュー名
+.top-price__name {
+  width: 80%;
+}
+//トップ料金、料金
+.top-price__yen {
+  width: 20%;
+  text-align: end;
+}
+//トップ料金、写真
+.top-price__img {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 345/227;
+  @include mq("md") {
+    width: 50%;
+    aspect-ratio: 746/492;
+  }
+}
+.top-price__img > source {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+//トップ料金、メニュー名
+.top-price__title {
+  overflow-wrap: anywhere;
+  font-size: rem(16);
+  line-height: 1.5;
+  border-bottom: solid rem(1) $green;
+  font-weight: $bold;
+  flex-shrink: 0;
+  margin-top: auto;
+  padding-bottom: rem(4);
+}
+.top-price__btn-wrapper {
+  margin-top: rem(40);
+  text-align: center;
+  padding-bottom: rem(5);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

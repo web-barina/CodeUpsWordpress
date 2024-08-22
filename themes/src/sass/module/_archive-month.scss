@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.archive-month {
+    display: block;
+    width: fit-content;
+    position: relative;
+    margin-top: rem(3);
+}
+
+.archive-month::before {
+    background: $green;
+    content: '';
+    width: 100%;
+    height: rem(2);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform .3s;
+}
+
+.archive-month:hover::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+//アーカイブ三角
+.archive-month {
+    position: relative;
+    margin-top: rem(3);
+}
+
+.archive-month::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(../images/common/sidebar-archive-arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform .3s ease-in-out, top .3s ease-in-out;
+    width: rem(24);
+    height: rem(24);
+    top: rem(8);
+    left: rem(-30);
+}

@@ -1,0 +1,200 @@
+@use "global" as *;
+
+.pager {
+  display: flex;
+  flex-direction: row;
+  gap: rem(39);
+  justify-content: center;
+}
+
+.pager--blog-article {
+  gap: rem(82);
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+  display: inline-block;
+  width: rem(38);
+  height: rem(38);
+  background-color: $white;
+  border: solid rem(1) $green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pager__number-wrapper,
+.wp-pagenavi {
+  display: flex;
+  flex-direction: row;
+  gap: rem(11);
+
+  @include mq("md") {
+    gap: rem(12);
+  }
+}
+
+.pager__number,
+a.page.larger,
+a.page.smaller {
+  display: inline-block;
+  min-width: rem(38);
+  height: rem(38);
+  background-color: $white;
+  color: $green;
+  border: solid rem(1) $green;
+  text-align: center;
+  line-height: 1;
+  padding: rem(11) rem(5);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.wp-pagenavi span.current {
+  background-color: $green;
+  border: solid rem(1) $green;
+  color: $white;
+}
+
+.pager__number:nth-child(5),
+.pager__number:nth-child(6) {
+  display: none;
+
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.pager__number:hover,
+.wp-pagenavi span.current:hover,
+a.page.larger:hover,
+a.page.smaller:hover {
+  background-color: $green;
+  color: $white;
+}
+
+.pager__path {
+  transition: fill 0.3s;
+}
+
+//前のページ、次のページ
+.pager__before-page {
+  display: inline-block;
+  width: rem(38);
+  height: rem(38);
+  border: solid rem(1) $green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+}
+
+.pager__before-page:hover {
+  background-color: $green;
+  color: $white;
+}
+
+.pager__before-page span {
+  // mask関連の指定
+  mask-position: center center;
+  mask-repeat: no-repeat;
+  mask-size: 30%;
+  mask-image: url(../images/common/pager-pre.svg);
+  background: $green;
+}
+
+.pager__before-page span:hover {
+  background: $white;
+}
+
+.pager__after-page {
+  display: inline-block;
+  width: rem(38);
+  height: rem(38);
+  border: solid rem(1) $green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pager__after-page:hover {
+  background-color: $green;
+  color: $white;
+}
+
+.pager__after-page span {
+  // mask関連の指定
+  mask-position: center center;
+  mask-repeat: no-repeat;
+  mask-size: 30%;
+  mask-image: url(../images/common/pager-next.svg);
+  background: $green; // 背景色でSVGの色を指定
+
+}
+
+.pager__after-page span:hover {
+  background: $white;
+}
+
+//前のページ、次のページの位置調整
+a.nextpostslink {
+  margin-left: rem(28);
+}
+
+a.previouspostslink {
+  margin-right: rem(28);
+}
+
+//ブログ記事内のページャー
+.pager__before,
+.pager__after {
+  display: inline-block;
+  width: rem(38);
+  height: rem(38);
+  border: solid rem(1) $green;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: $white;
+  color: $green;
+}
+
+.pager__before:hover,
+.pager__after:hover {
+  background-color: $green;
+  color: $white;
+}
+
+.pager__before a,
+.pager__after a {
+  height: inherit;
+  display: flex;
+  width: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.pager__before:hover .pager__path,
+.pager__after:hover .pager__path {
+  stroke: $white;
+}

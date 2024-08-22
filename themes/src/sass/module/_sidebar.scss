@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: rem(80);
+}
+
+
+.sidebar__title {
+  position: relative;
+  border-left: solid rem(8) $green;
+  padding: rem(13) 0 rem(13) rem(75);
+  line-height: 1;
+  font-size: rem(24);
+  font-weight: normal;
+}
+
+.sidebar__title::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url(../images/common/sidebar-icon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(50);
+  height: rem(50);
+  top: rem(0);
+  left: rem(16);
+}
+
+.sidebar__btn-wrapper {
+  margin-top: rem(43);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(41);
+  }
+}
+
+.sidebar__archive-content {
+  margin-top: rem(23);
+  color: $green;
+  font-size: rem(24);
+  padding-left: rem(32);
+}

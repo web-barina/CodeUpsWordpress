@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(20, 20, 20, 80%);
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    box-sizing: border-box;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/*モーダル本体の擬似要素の指定*/
+.modal:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+/*モーダル本体に「active」クラス付与した時のスタイル*/
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*モーダル枠の指定*/
+.modal__body {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 100vh;
+    overscroll-behavior: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.modal__content {
+    aspect-ratio: 580/369;
+    max-width: rem(350);
+    width: 100%;
+    position: relative;
+
+    @include mq("md") {
+        max-width: rem(800);
+        width: 100%;
+    }
+}
+
+.modal__content--large {
+    aspect-ratio: 492/760;
+    max-width: rem(350);
+
+    @include mq("md") {
+        max-width: rem(600);
+    }
+
+}
+
+.modal__content>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* モーダルの隠しスタイル */
+.modal[style*="display: none;"] {
+    display: none;
+}
+
+/* モーダルがアクティブなときのスタイル */
+.modal.active {
+    display: flex;
+}

@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.popular-cards {
+    margin-top: rem(24);
+    display: flex;
+    flex-direction: column;
+    gap: rem(23);
+}

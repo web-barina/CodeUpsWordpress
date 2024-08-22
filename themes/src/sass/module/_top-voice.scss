@@ -1,0 +1,35 @@
+@use "global" as *;
+//トップお客様の声
+.top-voice__cards {
+  margin-top: rem(40);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(49);
+  @include mq("md") {
+    margin-top: rem(30);
+    gap: rem(80) rem(40);
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+//トップお客様の声インナー
+.top-voice__inner {
+  max-width: rem(540);
+  padding: 0 rem(15);
+  margin: 0 auto;
+  @include mq("md") {
+    max-width: rem(1130);
+    padding: 0 rem(25);
+  }
+}
+//トップお客様の声周り
+.top-voice__btn-wrapper {
+  margin-top: rem(40);
+  text-align: center;
+  margin: rem(44) auto 0 auto;
+  flex-direction: column;
+  @include mq("md") {
+    margin-top: rem(30);
+    margin-top: rem(80);
+  }
+}

@@ -1,0 +1,47 @@
+@use "global" as *;
+
+//トップお客様の声 余白
+.top-voice-wrapper {
+  margin-top: rem(76);
+
+  @include mq("md") {
+    position: relative;
+    margin-top: rem(140);
+  }
+}
+
+//トップお客様の声、装飾上
+.top-voice-wrapper::before {
+  display: none;
+
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    background-image: url(../images/common/decoration-fish-right.svg);
+    display: block;
+    top: rem(-120);
+    left: calc(50% - min(48.4vw, 38.75rem));
+    width: rem(301);
+    height: rem(138);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+//トップお客様の声、装飾下
+.top-voice-wrapper::after {
+  display: none;
+
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    background-image: url(../images/common/decoration-dragon-fish.png);
+    display: block;
+    bottom: rem(-70);
+    right: calc(50% - min(37vw, 33.75rem));
+    width: rem(71);
+    height: rem(162);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

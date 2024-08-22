@@ -1,0 +1,95 @@
+@use "global" as *;
+
+//フッター全体
+.footer__inner {
+  max-width: rem(540);
+  width: 100%;
+  margin: 0 auto;
+
+  @include mq("md") {
+    max-width: initial;
+  }
+}
+
+//フッターCodeUpsロゴ
+.footer__logo {
+  width: rem(120);
+  height: auto;
+
+  @include mq("md") {
+    width: rem(200);
+  }
+}
+
+//フッターCodeUpsロゴ・SNSロゴ周り
+.footer__icons {
+  display: flex;
+  flex-direction: column;
+  max-width: rem(500);
+  width: 100%;
+  margin: 0 auto;
+
+  @include mq("md") {
+    max-width: rem(1080);
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+//フッターSNSロゴ周り
+.footer__sns-logos {
+  margin-top: rem(18.25);
+  display: flex;
+  flex-direction: row;
+  margin-left: rem(0);
+  column-gap: rem(23);
+
+  @include mq("md") {
+    margin-top: rem(0);
+    margin-left: rem(43);
+    padding-bottom: rem(10);
+    column-gap: rem(25);
+  }
+}
+
+//各SNS
+.footer__sns-logo {
+  width: rem(19.5);
+  height: auto;
+
+  @include mq("md") {
+    width: rem(24);
+  }
+}
+
+//コピーライト
+.footer__copy {
+  margin-top: rem(40);
+  font-size: rem(12);
+  font-family: $title-font-family;
+  text-align: center;
+}
+
+@include mq("md") {
+  .footer__copy {
+    margin-top: rem(80);
+    font-size: rem(14);
+  }
+}
+
+//サイトマップ上余白
+.footer__site-map-wrapper {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(24);
+  }
+}
+
+//スクロールトップ
+.footer__js-scroll-top__img {
+  max-width: 109%;
+  width: 109%;
+}

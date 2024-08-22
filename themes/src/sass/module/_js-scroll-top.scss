@@ -1,0 +1,71 @@
+@use "global" as *;
+
+//スクロールトップ
+#js-scroll-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: rem(48);
+  height: rem(48);
+  transition: all 0.3s;
+}
+
+#js-scroll-top a:hover {
+  background: transparent;
+}
+
+/*リンクを右下に固定*/
+#js-scroll-top {
+  position: fixed;
+  right: rem(15);
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(rem(100));
+
+  @include mq("md") {
+    right: rem(20);
+  }
+}
+
+/*上に上がる動き*/
+#js-scroll-top.UpMove {
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(trm(100));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*下に下がる動き*/
+#js-scroll-top.DownMove {
+  animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(rem(100));
+  }
+}
+
+@include mq("md") {
+  #js-scroll-top a {
+    width: rem(80);
+    height: rem(80);
+  }
+}

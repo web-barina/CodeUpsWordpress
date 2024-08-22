@@ -1,0 +1,202 @@
+@use "global" as *;
+
+//エラーの文章を一番上に出すためにorderで調整する
+form.wpcf7-form.invalid,
+form.wpcf7-form.init {
+    display: flex;
+    flex-direction: column;
+}
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+    margin-top: rem(16);
+    width: 100%;
+    border: solid rem(1) $green;
+    height: rem(40);
+    padding: 0 rem(16);
+    background-color: $white;
+    opacity: 1;
+
+    @include mq("md") {
+        margin-top: 0;
+        max-width: rem(480);
+        width: 106%;
+
+    }
+}
+
+
+textarea.wpcf7-form-control.wpcf7-textarea.wpcf7-validates-as-required {
+    margin-top: rem(16);
+    width: 100%;
+    border: solid rem(1) $green;
+    height: rem(200);
+    padding: rem(8);
+
+    @include mq("md") {
+        margin-top: 0;
+        max-width: rem(480);
+        width: 123%;
+    }
+}
+
+span.wpcf7-form-control.wpcf7-checkbox.wpcf7-validates-as-required {
+    margin-top: rem(14);
+    display: flex;
+    flex-direction: column;
+
+    @include mq("md") {
+        margin-top: 0;
+    }
+}
+
+.wpcf7-list-item label {
+    display: flex;
+    align-items: center;
+    margin: rem(2) 0 0 0;
+}
+
+//お問い合わせセレクト
+.wpcf7-form-control.wpcf7-select {
+    margin-top: rem(16);
+    border: solid rem(1) $green;
+    font-size: rem(12);
+    position: relative;
+    height: rem(40);
+    width: 100%;
+    color: transparent;
+
+    @include mq("md") {
+        margin-top: 0;
+        max-width: rem(480);
+        width: 300%;
+        height: rem(30);
+    }
+}
+
+.wpcf7-form-control.wpcf7-select::after {
+    position: absolute;
+    top: rem(13);
+    right: rem(16);
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/common/contact-form-triangle.png);
+    display: block;
+    height: rem(12);
+    width: rem(12);
+
+    @include mq("md") {
+        top: rem(7);
+    }
+
+}
+
+.wpcf7-form-control.wpcf7-select {
+    font-size: rem(12);
+    padding: rem(10) rem(32) rem(10) rem(16);
+    width: 100%;
+
+    @include mq("md") {
+        padding: rem(5) rem(32) rem(5) rem(16);
+    }
+}
+
+//チェックボックス
+span.wpcf7-form-control.wpcf7-checkbox {
+    display: flex;
+    flex-direction: column;
+}
+
+
+//同意の文章
+span.wpcf7-list-item-label {
+    max-width: rem(252);
+    width: 100%;
+
+    @include mq("md") {
+        max-width: none;
+    }
+}
+
+//プレースホルダー
+
+/* Webkitブラウザ（Chrome, Safari, Opera）用 */
+input.wpcf7-form-control.wpcf7-text::placeholder {
+    color: $light-green;
+}
+
+/* Firefox用 */
+input.wpcf7-form-control.wpcf7-text::-moz-placeholder {
+    color: $light-green;
+    opacity: 1;
+}
+
+/* Internet Explorer用 */
+input.wpcf7-form-control.wpcf7-text:-ms-input-placeholder {
+    color: $light-green;
+}
+
+/* Edge用 */
+input.wpcf7-form-control.wpcf7-text::-ms-input-placeholder {
+    color: $light-green;
+}
+
+/* Safari用 */
+input.wpcf7-form-control.wpcf7-text::placeholder {
+    color: $light-green;
+}
+
+//送信ボタンのスピナーを消す
+.wpcf7-spinner {
+    display: none;
+}
+
+//デフォルトのエラーの文章を消す
+.wpcf7-not-valid-tip {
+    display: none;
+}
+
+//エラー、送信成功の枠線
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+    color: $red;
+    font-size: rem(14);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    border-color: transparent;
+    order: 1;
+
+    @include mq("md") {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.wpcf7 form.invalid input[type="text"],
+.wpcf7 form.invalid input[type="email"],
+.wpcf7 form.invalid input[type="tel"],
+.wpcf7 form.invalid textarea {
+    background-color: rgba($color: $red, $alpha: 0.2);
+    border: solid rem(1) $red !important;
+    margin-top: rem(16);
+    width: 100%;
+    padding-left: rem(16);
+    font-size: rem(16);
+
+    @include mq("md") {
+        max-width: rem(480);
+        margin-top: 0;
+        width: 106%;
+    }
+}
+
+.wpcf7 form.invalid input[type="text"]::placeholder,
+.wpcf7 form.invalid input[type="email"]::placeholder,
+.wpcf7 form.invalid input[type="tel"]::placeholder {
+    color: $white;
+}

@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.campaign__tabs {
+  max-width: rem(540);
+  margin: 0 auto;
+
+  @include mq("md") {
+    max-width: none;
+  }
+}
+
+.campaign__cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: rem(41);
+  margin-top: rem(40);
+
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(40);
+    row-gap: rem(80);
+    margin-top: rem(40);
+  }
+}
+
+.campaign__cards-inner {
+  max-width: rem(311);
+  margin: 0 auto;
+
+  @include mq("md") {
+    max-width: none;
+  }
+}
+
+.campaign__pager-wrapper {
+  margin-top: rem(83);
+
+  @include mq("md") {
+    margin-top: rem(85);
+  }
+}

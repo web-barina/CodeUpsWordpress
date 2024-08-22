@@ -1,0 +1,171 @@
+@use "global" as *;
+
+.info__inner {
+  max-width: rem(540);
+
+  @include mq("md") {
+    max-width: rem(1130);
+  }
+}
+
+.info__tabs {
+  display: flex;
+  gap: rem(20);
+  justify-content: space-between;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.info__tab {
+  position: relative;
+  display: block;
+  padding: rem(10) 0;
+  background: $light-green;
+  color: $green;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(8);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  @include mq("md") {
+    padding: rem(26) 0;
+    max-width: rem(300);
+  }
+}
+
+.info__tab::before {
+  display: none;
+
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    top: rem(12);
+    height: rem(64);
+    width: rem(64);
+  }
+}
+
+.info__tab:hover {
+  background-color: #A0C7CA;
+}
+
+.info__tab--license::before {
+  background-image: url(../images/common/info-lisence-icon.png);
+  left: rem(30);
+}
+
+.info__tab--fun::before {
+  background-image: url(../images/common/info-fun-icon.png);
+  left: rem(17);
+}
+
+.info__tab--trial::before {
+  background-image: url(../images/common/info-trial-icon.png);
+  left: rem(30);
+}
+
+.info__tab--license.js-active::before {
+  background-image: url(../images/common/info-lisence-icon--white.png);
+}
+
+.info__tab--fun.js-active::before {
+  background-image: url(../images/common/info-fun-icon--white.png);
+}
+
+.info__tab--trial.js-active::before {
+  background-image: url(../images/common/info-trial-icon--white.png);
+}
+
+.info__tab.js-active {
+  background: $green;
+  color: $white;
+}
+
+.info__tab-text {
+  font-size: rem(14);
+  margin: 0 rem(16);
+
+  @include mq("md") {
+    margin-left: rem(89);
+    font-size: rem(24);
+  }
+}
+
+.info__content {
+  display: none;
+  border: solid rem(1) $green;
+  padding: rem(17) rem(24) rem(24);
+  flex-direction: column;
+  gap: rem(8);
+  background-color: $white;
+  opacity: 1;
+  margin-top: rem(13);
+
+  @include mq("md") {
+    flex-direction: row;
+    gap: rem(48);
+    padding: rem(24);
+    align-items: center;
+    margin-top: rem(24);
+  }
+}
+
+.info__content.js-active {
+  display: flex;
+}
+
+.info__texts {
+  width: 100%;
+
+  @include mq("md") {
+    width: 50%;
+  }
+}
+
+.info__img {
+  aspect-ratio: 297/189;
+  width: 100%;
+
+  @include mq("md") {
+    aspect-ratio: 492/313;
+    width: 50%;
+  }
+}
+
+.info>img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.info__title {
+  font-size: rem(24);
+  font-weight: $bold;
+  padding-bottom: rem(2);
+  border-bottom: solid rem(1) $green;
+
+  @include mq("md") {
+    padding-bottom: rem(8);
+  }
+}
+
+.info__text {
+  margin-top: rem(8);
+}

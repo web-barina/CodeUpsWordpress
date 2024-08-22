@@ -1,0 +1,133 @@
+@use "global" as *;
+
+.voice-card {
+  padding-top: rem(15);
+  padding-left: rem(16);
+  padding-right: rem(16);
+  padding-bottom: rem(15);
+  box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
+  background-color: $white;
+  width: 100%;
+  opacity: 1;
+
+  @include mq("md") {
+    padding: rem(24);
+    min-height: rem(369);
+  }
+}
+
+//お客様の声、お客様情報
+.voice-card__info {
+  display: flex;
+  flex-direction: row;
+  column-gap: rem(13);
+  align-items: end;
+  justify-content: space-between;
+
+  @include mq("md") {
+    column-gap: rem(16);
+  }
+}
+
+//お客様の声、年齢、性別周り
+.voice-card__customer-data-wrapper {
+  width: 100%;
+
+  @include mq("md") {
+    width: 58%;
+  }
+}
+
+//お客様の声、年齢、性別
+@include mq("md") {
+  .voice-card__customer-data {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    padding-bottom: rem(6);
+  }
+}
+
+//お客様の声、年齢
+.voice-card__customer-age {
+  font-size: rem(12);
+  line-height: 1.5;
+}
+
+//
+.voice-card__title-wrapper {
+  margin-top: rem(4);
+}
+
+//
+.voice-card__title {
+  overflow-wrap: anywhere;
+  font-size: rem(16);
+  padding-bottom: rem(4);
+  line-height: 1.4375;
+  border-bottom: solid rem(1) $green;
+  font-weight: $bold;
+  flex-shrink: 0;
+  margin-top: auto;
+
+  @include mq("md") {
+    font-size: rem(24);
+  }
+}
+
+//
+.voice-card__img {
+  position: relative;
+  aspect-ratio: 180/140;
+  width: 100%;
+
+  @include mq("md") {
+    aspect-ratio: 150/117;
+    width: 38%;
+  }
+}
+
+.voice-card__img>img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+//
+.voice-card__text {
+  padding-top: rem(16);
+  margin-top: 0;
+
+  @include mq("md") {
+    padding-top: rem(40);
+  }
+}
+
+//
+.voice-card__category {
+  display: inline-block;
+  padding: rem(3) rem(11);
+  font-size: rem(12);
+  color: $green;
+  border: solid rem(1) $green;
+  line-height: 1.833333;
+  width: fit-content;
+
+  @include mq("md") {
+    padding: rem(4) rem(14);
+  }
+}
+
+.voice-card__no-message {
+  margin-top: rem(50);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(100);
+  }
+}

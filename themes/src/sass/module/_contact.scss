@@ -1,0 +1,161 @@
+@use "global" as *;
+//お問い合わせセクションインナー
+.contact__inner {
+  max-width: rem(540);
+  @include mq("md") {
+    max-width: rem(1080);
+  }
+}
+//お問い合わせ本体
+.contact__content-inner {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  @include mq("md") {
+    padding: rem(80) rem(112) rem(78) rem(50);
+    max-width: rem(1080);
+    width: 100%;
+    flex-direction: row;
+    box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
+  }
+}
+//お問い合わせ左側周り
+.contact__info-wrapper {
+  margin-top: rem(16);
+  @include mq("md") {
+    margin-top: rem(0);
+  }
+}
+//お問い合わせ左側住所と地図まとまり
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
+  padding-top: rem(16);
+  border-top: solid rem(1) $green;
+  max-width: rem(295);
+  width: 100%;
+  margin: 0 auto;
+  @include mq("md") {
+    border-top: solid rem(1) $green;
+    flex-direction: row;
+    text-shadow: none;
+    padding-top: rem(24);
+    max-width: rem(440);
+    width: 100%;
+  }
+}
+//お問い合わせ左側住所
+.contact__address {
+  width: 100%;
+  text-align: center;
+  @include mq("md") {
+    text-align: left;
+  }
+}
+.contact__address p {
+  margin-top: rem(4);
+  white-space: nowrap;
+}
+.contact__address p:first-child {
+  margin-top: rem(0);
+}
+//お問い合わせ住所の周り
+.contact__address-wrapper {
+  width: 100%;
+  @include mq("md") {
+    padding-right: rem(80);
+    width: 100%;
+    border-right: solid rem(1) $green;
+  }
+}
+//お問い合わせ、電話
+.contact__tel {
+  display: inline-block;
+  margin-top: rem(5);
+}
+//お問い合わせ地図
+.contact__map {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 295/160;
+  background-color: #d9d9d9;
+  margin: rem(16) auto 0 auto;
+  text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
+  @include mq("md") {
+    aspect-ratio: 273/148;
+    margin-top: 0;
+    text-shadow: none;
+    width: 164%;
+  }
+}
+.contact__map > iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+//お問い合わせ右側
+.contact__content {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(0);
+    margin-left: rem(80);
+  }
+}
+//お問い合わせ右側テキスト
+.contact__text {
+  color: $green;
+  margin-top: rem(10);
+  line-height: 1.2857;
+  font-size: rem(14);
+  text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
+  @include mq("md") {
+    text-shadow: none;
+    margin-top: rem(8);
+  }
+}
+//お問い合わせ
+.contact__logo {
+  max-width: rem(174);
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  @include mq("md") {
+    max-width: rem(210);
+  }
+}
+.contact__btn-wrapper {
+  margin-top: rem(40);
+  text-align: center;
+  padding-bottom: rem(5);
+}
+//お問い合わせ、セクションタイトル
+.contact__titles-english {
+  font-family: $title-font-family;
+  font-size: rem(80);
+  line-height: 1;
+  text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
+  @include mq("md") {
+    text-shadow: none;
+  }
+}
+.contact__titles-english::first-letter {
+  color: $green;
+}
+.contact__titles-japanese {
+  font-size: rem(12);
+  font-weight: $regular;
+  color: $green;
+  line-height: 1;
+  margin-top: rem(-3);
+  text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
+  @include mq("md") {
+    text-shadow: none;
+    margin-top: rem(0);
+  }
+}

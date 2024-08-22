@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.tabs {
+  display: flex;
+  row-gap: rem(16);
+  column-gap: rem(16);
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include mq("md") {
+    column-gap: rem(32);
+    justify-content: flex-start;
+  }
+}

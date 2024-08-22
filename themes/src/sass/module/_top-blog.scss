@@ -1,0 +1,17 @@
+@use "global" as *;
+//トップブログインナー
+.top-blog__inner {
+  max-width: rem(540);
+  @include mq("md") {
+    max-width: rem(1130);
+  }
+}
+//ボタン周り
+.top-blog__btn-wrapper {
+  margin-top: rem(40);
+  text-align: center;
+  padding-bottom: rem(5);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

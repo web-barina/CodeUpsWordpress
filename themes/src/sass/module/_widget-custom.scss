@@ -1,0 +1,59 @@
+@use "global" as *;
+
+//管理画面ダッシュボード
+ul.custom_widget a {
+    display: flex;
+    gap: rem(16);
+    align-items: center;
+    padding: rem(10) 0;
+}
+
+ul.custom_widget li :hover {
+    background-color: $light-green;
+}
+
+ul.custom_widget {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+}
+
+.dashicons {
+    color: $green;
+    font-size: rem(24);
+}
+
+//各投稿画面
+p#block-1c3e6409-d29e-4efc-bbe8-f43b450af9f5,
+p.block-editor-default-block-appender__content {
+    background-color: #fff;
+    color: #444;
+}
+
+textarea#acf-field_669713a287c24,
+textarea#acf-field_669718180f1f4 {
+    border: solid rem(1) #2c3338;
+    width: 100%;
+    padding: rem(8);
+    margin: 0;
+    box-sizing: border-box;
+    font-size: rem(14);
+    line-height: 1.4;
+    border-radius: rem(4);
+}
+
+//ラジオボタン
+ul.acf-radio-list li label,
+ul.acf-checkbox-list li label {
+    display: flex !important;
+    align-items: center;
+}
+
+ul.acf-radio-list li input[type=radio] {
+    border: solid rem(1) #8c8f94;
+    display: block;
+}
+
+ul.acf-radio-list li input[type=radio]::before {
+    border: solid rem(1) #8c8f94;
+}

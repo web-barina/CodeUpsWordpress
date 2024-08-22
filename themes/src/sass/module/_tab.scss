@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.tab {
+    display: inline-block;
+    padding: rem(6);
+    min-width: rem(162);
+    background: $white;
+    color: $green;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    border: solid rem(1) $green;
+    opacity: 1;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.tab.js-active {
+    background: $green;
+    color: $white;
+}
+
+.tab:hover {
+    background-color: $green;
+    color: $white;
+}

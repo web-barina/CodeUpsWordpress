@@ -1,0 +1,138 @@
+@use "global" as *;
+
+//ボタン本体
+.btn {
+  position: relative;
+  display: inline-block;
+  width: rem(202);
+  padding: rem(16) 0;
+  background-color: $green;
+  color: $white;
+  font-family: $title-font-family;
+  font-size: rem(14);
+  line-height: 1.5714;
+  text-align: center;
+  z-index: 5;
+}
+
+.btn:hover {
+  color: $green;
+}
+
+//ボタン二重線
+.btn::before {
+  position: absolute;
+  border: rem(1) solid $green;
+  top: rem(4);
+  left: rem(10);
+  right: rem(-4);
+  bottom: rem(-4);
+  content: "";
+  display: inline-block;
+  z-index: -1;
+}
+
+//ボタン矢印
+.btn span {
+  position: relative;
+  display: inline-block;
+  width: rem(40);
+  height: rem(1);
+  margin-left: rem(8);
+  vertical-align: middle;
+  line-height: 1;
+  background: $white;
+  z-index: inherit;
+}
+
+.btn span:hover {
+  color: $green;
+}
+
+.btn span::after {
+  content: "";
+  position: absolute;
+  width: rem(10);
+  border: rem(1.8) solid $white;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(40deg);
+  transform-origin: top right;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  z-index: inherit;
+}
+
+//アニメーション
+.btn::after {
+  position: absolute;
+  background-color: $white;
+  border: rem(1) solid $green;
+  color: $green;
+  content: "";
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  width: 100%;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  transform: scale(1, 1);
+}
+
+.btn:hover span {
+  background-color: $green;
+}
+
+.btn:hover span::after {
+  border: rem(1.3) solid $green;
+}
+
+//404ページのボタン
+.btn--white {
+  background-color: $white;
+  color: $green;
+}
+
+.btn--white:hover {
+  color: $white;
+}
+
+//ボタン二重線
+.btn--white::before {
+  border: rem(1) solid $white;
+}
+
+//ボタン矢印
+.btn--white span {
+  background: $green;
+}
+
+.btn--white span:hover {
+  color: $white;
+}
+
+.btn--white span::after {
+  border: rem(1.8) solid $green;
+}
+
+//アニメーション
+.btn--white::after {
+  background-color: $green;
+  border: rem(1) solid $white;
+  color: $white;
+}
+
+.btn--white:hover span {
+  background-color: $white;
+}
+
+.btn--white:hover span::after {
+  border: rem(1.3) solid $white;
+}

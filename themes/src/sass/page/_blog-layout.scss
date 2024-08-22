@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.blog-layout {
+    position: relative;
+    margin-top: rem(52);
+
+    @include mq("md") {
+        margin-top: rem(150);
+    }
+}
+
+.blog-layout::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(../images/common/decoration-fish-right.svg);
+    top: rem(-50);
+    left: calc(50% - min(45.5vw, 10.7rem));
+    max-width: rem(117);
+    width: 100%;
+    height: rem(55);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @include mq("md") {
+        top: rem(-50);
+        left: calc(50% - min(43.1vw, 38.8rem));
+        max-width: rem(301);
+        height: rem(138);
+    }
+}
+
+.blog-layout__2column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include mq("md") {
+        flex-direction: row;
+        gap: calc(100% - (65% + 27%));
+    }
+}

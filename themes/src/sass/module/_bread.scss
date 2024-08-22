@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.bread {
+  font-size: rem(14);
+  margin-top: rem(8);
+}
+
+.bread__arrow {
+  width: rem(4);
+  height: rem(8);
+  margin-top: rem(7);
+}
+
+.bread__arrow--error {
+  display: none;
+}
+
+.bread__page {
+
+  display: flex;
+  flex-direction: row;
+  gap: rem(8);
+}

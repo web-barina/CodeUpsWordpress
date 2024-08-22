@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.info-wrapper {
+  margin-top: rem(121);
+  position: relative;
+
+  @include mq("md") {
+    margin-top: rem(150);
+  }
+}
+
+.info-wrapper::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url(../images/common/decoration-fish-right.svg);
+  top: rem(-94);
+  left: calc(50% - min(45.5vw, 10.7rem));
+  max-width: rem(117);
+  width: 100%;
+  height: rem(55);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mq("md") {
+    top: rem(-69);
+    left: calc(50% - min(43.1vw, 38.8rem));
+    max-width: rem(301);
+    height: rem(138);
+  }
+}

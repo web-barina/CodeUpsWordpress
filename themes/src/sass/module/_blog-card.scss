@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.blog-card {
+  padding-top: rem(16);
+  padding-left: rem(16);
+  padding-right: rem(16);
+  padding-bottom: rem(24);
+  box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
+  background-color: $white;
+  width: 100%;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.blog-card__img-wrapper {
+  overflow: hidden;
+}
+
+.blog-card__img {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 301/201;
+  transition: ease 0.5s all;
+}
+
+.blog-card__img>img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.blog-cards__item:hover .blog-card__img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.blog-card__img {
+  transition: transform 0.3s ease;
+}
+
+.blog-card__body {
+  margin-top: rem(17);
+}
+
+
+.blog-card__title {
+  overflow-wrap: anywhere;
+  font-size: rem(16);
+  line-height: 1.5;
+  border-bottom: solid rem(1) $green;
+  font-weight: $bold;
+  flex-shrink: 0;
+  padding-bottom: rem(3);
+
+}
+
+.blog-card__text {
+  margin-top: 0;
+  padding-top: rem(16);
+}
+
+.blog-card__time {
+  font-size: rem(12);
+  font-family: $second-font-family;
+  line-height: 1.5;
+}
+
+.blog-card__pager-wrapper {
+  margin-top: rem(80);
+}
+
+.blog-card__no-message {
+  margin-top: rem(50);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(100);
+    background-color: $white;
+    padding: rem(16);
+  }
+}

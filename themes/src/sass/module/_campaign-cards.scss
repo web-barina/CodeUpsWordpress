@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.campaign-cards {
+    margin-top: rem(23);
+    display: flex;
+    flex-direction: column;
+    gap: rem(43);
+
+    @include mq("md") {
+        gap: rem(47);
+    }
+}

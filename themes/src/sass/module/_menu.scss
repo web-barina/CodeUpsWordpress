@@ -1,0 +1,104 @@
+@use "global" as *;
+
+.menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include mq("md") {
+        flex-direction: row;
+    }
+}
+
+.menu__title-wrapper {
+    background-color: $green;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: rem(8);
+    color: $white;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: rem(8) 0;
+    height: auto;
+
+
+    @include mq("md") {
+        padding: 0;
+        flex-direction: column;
+        width: 28.5%;
+    }
+}
+
+.menu__title {
+    text-align: center;
+    font-size: rem(16);
+}
+
+.menu__title-img {
+    width: rem(24);
+
+    @include mq("md") {
+        width: rem(64);
+        margin: rem(8) auto 0;
+    }
+}
+
+.menu__lists {
+    width: 100%;
+    align-items: center;
+    border: 1px solid $green;
+    border-collapse: collapse;
+
+    @include mq("md") {
+        width: 71.5%;
+    }
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid $green;
+    border-collapse: collapse;
+    min-height: rem(60);
+}
+
+.menu__list:not(:first-child) {
+    border-top: none;
+}
+
+.menu__name {
+    width: 69%;
+    text-align: center;
+    border: 1px solid $green;
+    border-collapse: collapse;
+    padding: rem(18) rem(16);
+
+
+    @include mq("md") {
+        text-align: start;
+        width: 68%;
+    }
+}
+
+.menu__yen {
+    width: 31%;
+    text-align: end;
+    padding: rem(18) rem(16);
+    border: 1px solid $green;
+    border-collapse: collapse;
+
+    @include mq("md") {
+        width: 32%;
+    }
+}
+
+.menu__pc-none {
+    display: block;
+
+    @include mq("md") {
+        display: none;
+    }
+}

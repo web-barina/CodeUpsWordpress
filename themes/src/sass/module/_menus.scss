@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.menus {
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+
+    @include mq("md") {
+        gap: rem(74);
+    }
+}

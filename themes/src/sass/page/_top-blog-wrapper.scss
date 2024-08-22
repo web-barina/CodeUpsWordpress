@@ -1,0 +1,36 @@
+@use "global" as *;
+
+//トップブログセクション余白
+.top-blog-wrapper {
+  padding-top: rem(80);
+  background-image: none;
+
+  @include mq("md") {
+    position: relative;
+    width: 100%;
+    padding-top: rem(100);
+    background-image: url(../images/common/blog-back.png);
+    background-size: 100% rem(500);
+    background-repeat: no-repeat;
+    position: relative;
+  }
+}
+
+//装飾
+.top-blog-wrapper::after {
+  display: none;
+
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    background-image: url(../images/common/blog-fish.png);
+    display: block;
+    top: rem(24);
+    left: calc(50% - min(42.4vw, 38.7rem));
+    max-width: rem(437);
+    width: 100%;
+    height: rem(201);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

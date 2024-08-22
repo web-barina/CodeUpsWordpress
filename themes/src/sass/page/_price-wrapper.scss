@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.price-wrapper {
+    margin-top: rem(50);
+    position: relative;
+
+    @include mq("md") {
+        margin-top: rem(156);
+    }
+}
+
+.price-wrapper::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(../images/common/decoration-fish-right.svg);
+    top: rem(-24);
+    left: calc(50% - min(45.4vw, 10.8rem));
+    max-width: rem(117);
+    width: 100%;
+    height: rem(55);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @include mq("md") {
+        top: rem(-75);
+        left: calc(50% - min(43vw, 39rem));
+        max-width: rem(301);
+        height: rem(138);
+    }
+}

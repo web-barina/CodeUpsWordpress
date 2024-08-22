@@ -1,0 +1,38 @@
+@use "global" as *;
+
+//ボタン本体
+input.wpcf7-form-control.wpcf7-submit {
+    position: relative;
+    display: inline-block;
+    width: rem(202);
+    padding: rem(16) 0;
+    background-color: transparent;
+    color: $white;
+    font-family: $title-font-family;
+    font-size: rem(14);
+    line-height: 1.5714;
+    text-align: center;
+    z-index: 5;
+}
+
+input.wpcf7-form-control.wpcf7-submit:hover {
+    color: $green;
+}
+
+//ボタン二重線
+input.wpcf7-form-control.wpcf7-submit:before {
+    position: absolute;
+    border: rem(1) solid $green;
+    top: rem(4);
+    left: rem(10);
+    right: rem(-4);
+    bottom: rem(-4);
+    content: "";
+    display: inline-block;
+    z-index: -1;
+}
+
+//チェックボックス管理画面での表示修正
+input[type=checkbox]:checked::before {
+    margin: 0;
+}

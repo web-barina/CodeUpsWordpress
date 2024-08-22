@@ -1,0 +1,26 @@
+@use "global" as *;
+
+//アーカイブ三角
+.archive-year {
+    position: relative;
+    margin-top: rem(3);
+}
+
+.archive-year::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(../images/common/sidebar-archive-arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform .3s ease-in-out, top .3s ease-in-out;
+    width: rem(24);
+    height: rem(24);
+    top: rem(8);
+    left: rem(-30);
+}
+
+.archive-year.open::after {
+    transform: rotate(90deg);
+}

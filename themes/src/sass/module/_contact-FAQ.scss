@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.contact-faq {
+  margin-top: rem(50);
+
+  @include mq("md") {
+    margin-top: rem(149);
+  }
+}
+
+.contact-faq__inner.inner {
+  max-width: rem(540);
+  width: 100%;
+
+  @include mq("md") {
+    max-width: rem(700);
+    width: 100%;
+  }
+}

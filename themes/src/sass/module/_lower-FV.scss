@@ -1,0 +1,108 @@
+@use "global" as *;
+
+.lower-FV__img {
+  position: relative;
+  width: 100%;
+  height: rem(460);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/common/aboutus-FV-sp.jpg);
+
+  @include mq("md") {
+    background-image: url(../images/common/aboutus-FV.jpg);
+    height: rem(548);
+  }
+}
+
+.lower-FV__img h1 {
+  position: absolute;
+  text-wrap: nowrap;
+  top: rem(229);
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: $white;
+  font-weight: $normal;
+  font-size: rem(40);
+  font-family: $second-font-family;
+
+  @include mq("md") {
+    top: rem(325);
+    color: $white;
+    line-height: 1.25;
+    font-size: rem(80);
+  }
+}
+
+.lower-FV__img--campaign {
+  background-image: url(../images/common/campaign-FV-sp.png);
+
+  @include mq("md") {
+    background-image: url(../images/common/campaign-FV.png);
+  }
+}
+
+.lower-FV__img--about {
+  background-image: url(../images/common/aboutus-FV-sp.jpg);
+
+  @include mq("md") {
+    background-image: url(../images/common/aboutus-FV.jpg);
+  }
+}
+
+.lower-FV__img--info {
+  background-image: url(../images/common/info-FV-sp.jpg);
+
+  @include mq("md") {
+    background-image: url(../images/common/info-FV.jpg);
+  }
+}
+
+.lower-FV__img--blog {
+  background-image: url(../images/common/blog-FV-sp.png);
+
+  @include mq("md") {
+    background-image: url(../images/common/blog-FV.png);
+  }
+}
+
+.lower-FV__img--voice {
+  background-image: url(../images/common/voice-FV-sp.png);
+
+  @include mq("md") {
+    background-image: url(../images/common/voice-FV.png);
+  }
+}
+
+.lower-FV__img--price {
+  background-image: url(../images/common/price-FV-sp.jpg);
+
+  @include mq("md") {
+    background-image: url(../images/common/price-FV.png);
+  }
+}
+
+.lower-FV__img--FAQ {
+  background-image: url(../images/common/FAQ-FV-sp.png);
+
+  @include mq("md") {
+    background-image: url(../images/common/FAQ-FV.jpg);
+  }
+}
+
+.lower-FV__img--contact {
+  background-image: url(../images/common/contact-FV-sp.jpg);
+
+  @include mq("md") {
+    background-image: url(../images/common/contact-FV.png);
+  }
+}
+
+.lower-FV__img--fish {
+  background-image: url(../images/common/sitemap-privacy-FV-sp.png);
+
+  @include mq("md") {
+    background-image: url(../images/common/sitemap-privacy-FV.png);
+  }
+}

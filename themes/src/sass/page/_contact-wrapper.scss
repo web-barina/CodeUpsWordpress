@@ -1,0 +1,88 @@
+@use "global" as *;
+
+//お問い合わせセクション余白余白
+.contact-wrapper {
+  position: relative;
+  margin: rem(63) auto 0 auto;
+
+  @include mq("md") {
+    margin: rem(140) auto 0 auto;
+  }
+}
+
+.contact-wrapper--info,
+.contact-wrapper--layout {
+  margin: rem(90) auto 0 auto;
+
+  @include mq("md") {
+    margin: rem(140) auto 0 auto;
+  }
+
+}
+
+.contact-wrapper--site-map,
+.contact-wrapper--FAQ,
+.contact-wrapper--campaign,
+.contact-wrapper--voice,
+.contact-wrapper--privacy {
+  margin: rem(91) auto 0 auto;
+
+  @include mq("md") {
+    margin: rem(140) auto 0 auto;
+  }
+}
+
+.contact-wrapper--terms,
+.contact-wrapper--about {
+  margin: rem(92) auto 0 auto;
+
+  @include mq("md") {
+    margin: rem(140) auto 0 auto;
+  }
+}
+
+.contact-wrapper--price {
+  margin: rem(80) auto 0 auto;
+
+  @include mq("md") {
+    margin: rem(100) auto 0 auto;
+  }
+}
+
+.contact-wrapper--price {
+  margin: rem(88) auto 0 auto;
+
+  @include mq("md") {
+    margin: rem(140) auto 0 auto;
+  }
+}
+
+.contact-wrapper::after {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url(../images/common/decoration-fish.png);
+  top: rem(-10);
+  right: calc(50% - min(46.4vw, 10.8rem));
+  max-width: rem(109);
+  width: 100%;
+  height: rem(50);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mq("md") {
+    top: rem(-40);
+    right: calc(50% - min(46.4vw, 42rem));
+    max-width: rem(301);
+    height: rem(138);
+  }
+}
+
+
+.contact-wrapper--layout::after {
+  top: rem(-11);
+
+  @include mq("md") {
+    top: rem(-40);
+  }
+}

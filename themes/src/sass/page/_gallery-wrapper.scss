@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.gallery-wrapper {
+  margin-top: rem(36);
+
+  @include mq("md") {
+    margin-top: rem(115);
+    position: relative;
+  }
+}
+
+.gallery-wrapper::before {
+  display: none;
+
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(../images/common/contact-fish.png);
+    right: calc(50% - min(44.6vw, 40.1rem));
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    top: rem(-79);
+    max-width: rem(302);
+    height: rem(143);
+  }
+}

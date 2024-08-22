@@ -1,0 +1,154 @@
+@use "global" as *;
+
+//インナー
+.top-about-us__inner {
+  max-width: rem(500);
+  width: 100%;
+
+  @include mq("md") {
+    max-width: rem(1130);
+    width: 100%;
+  }
+}
+
+//about us画像全体
+.top-about-us__img-wrapper {
+  margin-top: rem(28);
+  display: flex;
+  flex-direction: row;
+
+  @include mq("md") {
+    margin-top: rem(40);
+    position: relative;
+  }
+}
+
+//トップabout us装飾
+.top-about-us__img-wrapper::after {
+  display: none;
+
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    background-image: url("../images/common/about-us-decoration.png");
+    display: block;
+    bottom: -13%;
+    right: calc(50% - min(44.4vw, 39.8rem));
+    width: rem(194);
+    height: rem(181);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+//ボタン周り
+.top-about-us__btn-wrapper {
+  margin-top: rem(25);
+  text-align: center;
+  padding-bottom: rem(5);
+
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+//top-about us画像全体
+.top-about-us {
+  display: flex;
+  flex-direction: row;
+}
+
+//テキスト全体
+.top-about-us__texts {
+  margin-top: rem(39);
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: rem(0);
+
+  @include mq("md") {
+    margin-top: rem(41);
+    width: min(rem(840), 80%);
+    position: absolute;
+    grid-template-columns: 1fr 1fr;
+    column-gap: rem(40);
+    color: $white;
+    top: 34.5%;
+    right: calc(50% - min(48.4vw, 31rem));
+  }
+}
+
+.top-about-us__main-text {
+  font-size: rem(40);
+  line-height: 1;
+  font-family: $title-font-family;
+  color: $green;
+
+  @include mq("md") {
+    font-size: rem(80);
+    line-height: 1.2;
+    color: $white;
+  }
+}
+
+.top-about-us__text {
+  margin-top: rem(16);
+  font-weight: $regular;
+
+  @include mq("md") {
+    margin-top: rem(0);
+  }
+}
+
+//top-about us背景画像左側
+.top-about-us__img-left {
+  margin-bottom: rem(18);
+  position: relative; //写真比率管理用
+  aspect-ratio: 128 / 194;
+  width: 37.03%;
+  z-index: 0;
+}
+
+.top-about-us__img-left>img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+@include mq("md") {
+  .top-about-us__img-left {
+    margin-bottom: rem(55);
+    aspect-ratio: 400 / 606;
+  }
+}
+
+//top-about us背景画像右側
+.top-about-us__img-right {
+  margin-top: rem(26);
+  margin-left: rem(-64);
+  width: 83%;
+  aspect-ratio: 281 / 186;
+  position: relative; //写真比率管理用
+  z-index: -1;
+}
+
+.top-about-us__img-right>img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+@include mq("md") {
+  .top-about-us__img-right {
+    aspect-ratio: 880 / 581;
+    margin-top: rem(80);
+    margin-left: rem(-200);
+  }
+}
