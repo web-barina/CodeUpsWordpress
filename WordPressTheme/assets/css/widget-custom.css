@@ -44,6 +44,12 @@ ul.acf-checkbox-list li label {
   align-items: center;
 }
 
+ul.acf-radio-list.acf-bl {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
 ul.acf-radio-list li input[type="radio"] {
   border: solid 1px #8c8f94;
   display: block;
