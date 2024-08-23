@@ -40,7 +40,7 @@ textarea#acf-field_669718180f1f4 {
 
 ul.acf-radio-list li label,
 ul.acf-checkbox-list li label {
-  display: flex;
+  display: flex !important;
   align-items: center;
 }
 
